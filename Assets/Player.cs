@@ -14,52 +14,59 @@ public class Player : MonoBehaviour
     bool gameOver = false;
     public int score = 0;
     public int life;
-
+    
     // Start is called before the first frame update
     void Start()
     {
+
         characterController = gameObject.GetComponent<CharacterController>();
         gun = gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
         score = 0;
         life = 3;
-        textMeshProUGUI.text = "Score: " + score;
-        finalScore = score;
+        textMeshProUGUI.text = "Score: " + score + "\nLife: " + life;
+        
     }
 
     public void shoot()
     {
         StartCoroutine("Shoot");
     }
-
     IEnumerator Shoot()
     {
-        // gun.GetComponent<Animation>().Play();
+       // gun.GetComponent<Animation>().Play();
         yield return new WaitForSeconds(1f);
         score += 1;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        textMeshProUGUI.text = "Score: " + score;
-        // go player forward automatically
-        if (gameOver == false)
+        textMeshProUGUI.text = "Score: " + score + "\nLife: " + life;
+        if(gameOver == true)
         {
-            characterController.SimpleMove(cameraTransform.forwrd * 10);
-        }
+            finalScore = score;
 
-        // if player is dead, stop moving
-        if (life == 0)
-        {
-            gameOver = true;
-            textMeshProUGUI2.text = "Game Over";
-            textMeshProUGUI.text = "Score: " + finalScore;
-            characterController.SimpleMove(Vector3.zero);
+            textMeshProUGUI2.text = "Game Over" + "\n Your Score: "+finalScore;
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Collide");
+        if(collision.gameObject.tag == "asteroid")
+        {
+            if(life <= 0)
+            {
+                life = 0;
+                gameOver = true;
+            }
+            if (life>0)
+            {
+                life--;
+            }
+            Debug.Log("hello");
+        }
+        
     }
+    
 }
