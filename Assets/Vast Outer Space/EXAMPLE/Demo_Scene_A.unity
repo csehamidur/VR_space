@@ -719,7 +719,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1080,7 +1080,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278196716
-  m_fontColor: {r: 0.9245283, g: 0.09624841, b: 0, a: 1}
+  m_fontColor: {r: 0.79607844, g: 0.09624841, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1293,7 +1293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -491, y: 184.2}
+  m_AnchoredPosition: {x: -309.8, y: 184.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2071444426
@@ -1324,9 +1324,9 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
+    rgba: 4281150190
+  m_fontColor: {r: 0.9339623, g: 0.16300285, b: 0.17651112, a: 1}
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -1338,14 +1338,14 @@ MonoBehaviour:
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
+  m_overrideHtmlColors: 1
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1518,6 +1518,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4171638970516633970, guid: 5b91c576eebffd84192577ea2061a922,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.5841255
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171638970516633970, guid: 5b91c576eebffd84192577ea2061a922,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7.5841255
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171638970516633970, guid: 5b91c576eebffd84192577ea2061a922,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 7.5841255
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171638970516633970, guid: 5b91c576eebffd84192577ea2061a922,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1607,7 +1622,7 @@ PrefabInstance:
     - target: {fileID: 9007234313626897140, guid: 04fe3145c2f9e314c88c23a8c526a6df,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30
+      value: -15.13
       objectReference: {fileID: 0}
     - target: {fileID: 9007234313626897140, guid: 04fe3145c2f9e314c88c23a8c526a6df,
         type: 3}

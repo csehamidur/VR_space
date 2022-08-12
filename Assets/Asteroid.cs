@@ -24,7 +24,7 @@ public class Asteroid : MonoBehaviour
     {
         var user = GameObject.FindGameObjectsWithTag("player");
         Vector3 userPosition = player.transform.position;
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, userPosition, 3 * Time.deltaTime);
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, userPosition, 5 * Time.deltaTime);
     }
 
 
@@ -56,7 +56,7 @@ public class Asteroid : MonoBehaviour
             GameObject asteroid = Instantiate(Resources.Load("Asteroid1")) as GameObject;
             float x = Random.Range(-35f, 35f);
             float z = Random.Range(45f, 70f);
-            float y = Random.Range(10f, 20f);
+            float y = Random.Range(5f, 25f);
             asteroid.transform.position = new Vector3(x, y, z);
         }
            
