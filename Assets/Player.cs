@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     IEnumerator Shoot()
     {
        // gun.GetComponent<Animation>().Play();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.1f);
         score += 1;
         
     }
@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
         {
             finalScore = score;
 
-            textMeshProUGUI2.text = "Game Over" + "\n Your Score: "+finalScore;
+            textMeshProUGUI2.text = "Game Over" + "\nScore: "+score;
         }
     }
 
