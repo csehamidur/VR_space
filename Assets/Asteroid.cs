@@ -33,11 +33,11 @@ public class Asteroid : MonoBehaviour
      
         GetComponent<AudioSource>().Play();
         numberOfAsteriod = GameObject.FindGameObjectsWithTag("asteroid").Length;
-        if(numberOfAsteriod<=10)
+        if(numberOfAsteriod<=20)
         {
             GameObject asteroid = Instantiate(Resources.Load("Asteroid1")) as GameObject;
             float x = Random.Range(-35f, 35f);
-            float z = Random.Range(45f, 100f);
+            float z = Random.Range(45f, 70f);
             float y = Random.Range(10f, 20f);
             asteroid.transform.position = new Vector3(x, y, z);
         }
@@ -46,4 +46,21 @@ public class Asteroid : MonoBehaviour
         Destroy(gameObject, .3f);
 
     }
+
+    void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag == "player")
+        {
+            Destroy(gameObject);
+
+            GameObject asteroid = Instantiate(Resources.Load("Asteroid1")) as GameObject;
+            float x = Random.Range(-35f, 35f);
+            float z = Random.Range(45f, 70f);
+            float y = Random.Range(10f, 20f);
+            asteroid.transform.position = new Vector3(x, y, z);
+        }
+           
+
+    }
+
 }

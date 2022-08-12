@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4171638971095177725}
   - component: {fileID: 4171638971095177726}
   - component: {fileID: 4171638971095177714}
-  - component: {fileID: 4171638971095177715}
   m_Layer: 0
   m_Name: Asteroid1
   m_TagString: asteroid
@@ -205,28 +204,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!195 &4171638971095177715
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4171638970516776066}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 1
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &4171638970516794470
 GameObject:
   m_ObjectHideFlags: 0

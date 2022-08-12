@@ -23,8 +23,8 @@ public class Player : MonoBehaviour
         gun = gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
         score = 0;
         life = 3;
-        textMeshProUGUI.text = "Score: " + score;
-        finalScore = score;
+        textMeshProUGUI.text = "Score: " + score + "\nLife: " + life;
+        
     }
 
     public void shoot()
@@ -42,12 +42,31 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textMeshProUGUI.text = "Score: " + score;
+        textMeshProUGUI.text = "Score: " + score + "\nLife: " + life;
+        if(gameOver == true)
+        {
+            finalScore = score;
+
+            textMeshProUGUI2.text = "Game Over" + "\n Your Score: "+finalScore;
+        }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Collide");
-
+        if(collision.gameObject.tag == "asteroid")
+        {
+            if(life <= 0)
+            {
+                life = 0;
+                gameOver = true;
+            }
+            if (life>0)
+            {
+                life--;
+            }
+            Debug.Log("hello");
+        }
+        
     }
+    
 }
