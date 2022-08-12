@@ -42,6 +42,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-   
+        textMeshProUGUI.text = "Score: " + score;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collide");
+
     }
 }

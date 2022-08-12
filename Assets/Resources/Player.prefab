@@ -47,7 +47,7 @@ MonoBehaviour:
   raycastMode: 0
   overridePointerCamera: {fileID: 9007234314385158659}
   drawDebugRays: 0
-  maxReticleDistance: 20
+  maxReticleDistance: 1000
   reticleSegments: 20
   reticleGrowthSpeed: 8
   reticleSortingOrder: 32767
@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 9007234313626897140}
   - component: {fileID: 9007234313626897143}
   - component: {fileID: 9007234313626897142}
+  - component: {fileID: 719239169}
   m_Layer: 0
   m_Name: Player
   m_TagString: player
@@ -153,7 +154,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1270c567bd57043b06a289633d3394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTransform: {fileID: 0}
+  cameraTransform: {fileID: 189101063756256502}
+  textMeshProUGUI: {fileID: 0}
+  textMeshProUGUI2: {fileID: 0}
+  score: 0
+  life: 0
+--- !u!136 &719239169
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9007234313626897141}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.27
+  m_Height: 0.55
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9007234313706096568
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,13 +198,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9007234313706096568}
-  m_LocalRotation: {x: -0.14513928, y: -0.14869104, z: -0.07799049, w: 0.9750605}
-  m_LocalPosition: {x: 1.49, y: -1.78, z: -0.25}
-  m_LocalScale: {x: 3.6831758, y: 3.8141768, z: 6.810263}
+  m_LocalRotation: {x: -0.16049859, y: -0.19800423, z: -0.10769004, w: 0.96095645}
+  m_LocalPosition: {x: 1.6, y: -2, z: 3}
+  m_LocalScale: {x: 3.262731, y: 2.7343934, z: 2.8673253}
   m_Children: []
   m_Father: {fileID: 189101063756256502}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -17.832, y: -16.309, z: -6.571}
+  m_LocalEulerAnglesHint: {x: -20.555, y: -21.685001, z: -8.81}
 --- !u!33 &9007234313705135032
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -247,6 +266,7 @@ GameObject:
   - component: {fileID: 7469251123819257418}
   - component: {fileID: 4152186983259855726}
   - component: {fileID: 1739954087924137955}
+  - component: {fileID: 386695416}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -300,7 +320,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 26.991467
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -365,6 +385,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &1739954087924137955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9007234314385158657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb5dd43baba2d4dc1bab789615567e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycasterEventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  maxRaycastHits: 64
+--- !u!114 &386695416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

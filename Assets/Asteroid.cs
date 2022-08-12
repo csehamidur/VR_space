@@ -43,7 +43,7 @@ public class Asteroid : MonoBehaviour
         }
         
         ps.shoot();
-        Destroy(gameObject, .5f);
+        Destroy(gameObject, .3f);
 
     }
 }
